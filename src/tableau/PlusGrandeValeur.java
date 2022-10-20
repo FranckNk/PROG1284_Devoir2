@@ -13,13 +13,28 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class PlusGrandeValeur {
-    static int Max = 100;
-    static int Min = 0;
+    static int Max           = 100;
+    static int Min           =  0;
+    static int TailleTableau = 15;
+
+    private static void AfficheTableau(Integer [] Tableau){
+        for (int i = 0; i < Tableau.length; i++) {
+            System.out.format("Tableau[%2d] = %2d\n", i, Tableau[i]);
+        }
+    }
+
+    private static void RemplirRandTableau(Integer [] Tableau){
+        Random rand = new Random();
+        int NombreAleatoire = 0;
+        for (int i = 0; i < Tableau.length; i++) {
+            Tableau[i] = rand.nextInt(Max - Min + 1) + Min;
+        }
+    }
 
     public static void main(String[] args) throws Exception {
-        Random rand = new Random();
-        Scanner sc = new Scanner(System.in);
-        int NombreAleatoire = rand.nextInt(Max - Min + 1) + Min;
-        System.out.println("Rand : " + NombreAleatoire);
+        Integer Table [] = new Integer[TailleTableau];
+        RemplirRandTableau(Table);
+        AfficheTableau(Table);
+        
     }
 }
