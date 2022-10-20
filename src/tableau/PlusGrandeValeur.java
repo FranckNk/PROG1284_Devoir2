@@ -28,7 +28,7 @@ public class PlusGrandeValeur {
         int NombreAleatoire = 0;
         for (int i = 0; i < Tableau.length; i++) {
             Tableau[i] = rand.nextInt(Max - Min + 1) + Min;
-        }
+        } 
     }
 
     public static void main(String[] args) throws Exception {
