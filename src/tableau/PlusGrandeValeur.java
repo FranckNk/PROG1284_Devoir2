@@ -20,6 +20,7 @@ public class PlusGrandeValeur {
 
     // Affichons le tableau.
     private static void AfficheTableau(Integer [] Tableau){
+        System.out.println("****************Affichage du tableau**************");
         for (int i = 0; i < Tableau.length; i++) {
             System.out.format("Tableau[%2d] = %2d\n", i, Tableau[i]);
         }
